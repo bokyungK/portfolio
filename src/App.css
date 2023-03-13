@@ -197,7 +197,8 @@ body {
 .language {
   display: inline-block;
   padding: 0.2rem;
-  background-color:F3E8EB;
+  background-color: #928490;
+  color: #433E49;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   border-radius: 5px;
@@ -222,6 +223,11 @@ body {
 }
 
 .urlItems:active, .urlItems:visited {
+  padding: 0.2rem;
+  background-color: #DBC1AD;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
   color: #433E49;
 }
 
