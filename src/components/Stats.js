@@ -24,7 +24,7 @@ function Stats() {
                         <span>Hooks(useState, useEffect, useCallback, Router ..) 사용 경험</span>
                         <span>recoil(상태 관리 라이브러리) 사용 경험</span>
                     </li>
-                    <li><span>Express</span></li>
+                    <li><span>Rest Api 통신 구현</span></li>
                     <li>
                         <span>EC2 서버 배포</span>
                         <span>RDS(MYSQL) 서버와 연결</span>
