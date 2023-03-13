@@ -4,7 +4,7 @@ function Stats() {
     return (
         <div className="Stats">
             <div className="inner">
-                <ol className="skillList">
+                <ol className="skillList skillName">
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>Javascript</li>
