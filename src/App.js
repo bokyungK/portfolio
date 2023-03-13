@@ -7,18 +7,18 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <div className="wrapper">
-          <Header></Header>
-          <Routes>
-            <Route path="/" element={<Contact />}></Route>
-            <Route path="/stat" element={<Stats />}></Route>
-            <Route path="/project" element={<Projects />}></Route>
-          </Routes>
-        </div>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <div className="App">
+          <div className="wrapper">
+            <Header></Header>
+            <Routes>
+              <Route exact path="/" element={<Contact />}></Route>
+              <Route path="/stat" element={<Stats />}></Route>
+              <Route path="/project" element={<Projects />}></Route>
+            </Routes>
+          </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
