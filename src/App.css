@@ -9,7 +9,11 @@
   box-sizing: border-box;
 }
 
-a:active, a:visited {
+a:visited {
+  color:#F3E8EB;
+}
+
+a:link {
   color:#F3E8EB;
 }
 

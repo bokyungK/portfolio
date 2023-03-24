@@ -8,7 +8,7 @@ function Stats() {
                     <li className="skill">
                         <h2>HTML</h2>
                         <div className="description">
-                            <span>Semantic tag</span>
+                            <span>Semantic Web</span>
                             <span>meta tag를 이용한 검색 엔진 최적화</span>
                         </div>
                     </li>
