@@ -69,18 +69,18 @@ body {
 
 /* Contact */
 .Contact {
-  display: flex;
-  height: calc(100vh - 300px);
-  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 50px;
 }
 
 .Contact > .inner {
-  width: 1000px;
+  max-width: 1000px;
   height: max-content;
   display: flex;
+  flex-direction: column;
   margin: 0 auto;
   justify-content: space-around;
-  transform: translateY(-80px);
+  align-items: center;
 }
 
 .profile {
@@ -244,19 +244,6 @@ body {
   }
 
   /* Contact */
-  .Contact {
-    height: 100%;
-    align-items: center;
-    margin-bottom: 50px;
-  }
-
-  .Contact > .inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transform: translateY(0);
-  }
-
   .profile {
     width: 300px;
     height: 300px;
