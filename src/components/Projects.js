@@ -5,7 +5,7 @@ function Projects() {
         <div className="Projects">
                 <ol className="projectContainer">
                     <li className="projectItem">
-                        <img className="projectImage" src="ptdg_preview.png" alt="프로젝트 미리보기"></img>
+                        <img className="projectImage" src="ptdg_preview.webp" alt="프로젝트 미리보기"></img>
                         <div className="projectInfo">
                             <h2>Pig Dice Game!</h2>
                             <p>
@@ -22,7 +22,7 @@ function Projects() {
                         </div>
                     </li>
                     <li className="projectItem">
-                        <img className="projectImage" src="wallet_preview.jpg" alt="프로젝트 미리보기"></img>
+                        <img className="projectImage" src="wallet_preview.webp" alt="프로젝트 미리보기"></img>
                         <div className="projectInfo">
                             <h2>내 지갑 관리</h2>
                             <p>Figma로 제작된 디자인 시안을 시맨틱 마크업을 적용해 퍼블리싱 작업한 프로젝트입니다.</p>
@@ -36,7 +36,7 @@ function Projects() {
                         </div>
                     </li>
                     <li className="projectItem">
-                        <img className="projectImage" src="lecture_preview.png" alt="프로젝트 미리보기"></img>
+                        <img className="projectImage" src="lecture_preview.webp" alt="프로젝트 미리보기"></img>
                         <div className="projectInfo">
                             <h2>찌니쌤 일본어</h2>
                             <p>일본어 강의 페이지의 화면을 vanilla JS, 반응형으로 제작한 
@@ -52,14 +52,12 @@ function Projects() {
                                 <span className="language">AWS Lambda</span>
                             </div>
                             <div className="projectType">개인 프로젝트</div>
-                            <div className="urlContainer">
-                                <a className="urlItems" href="https://www.notion.so/gombobbang/ad1be22c7f134ce7a16a194519a2a29e">프로젝트 소개로 이동</a>
-                                <a className="urlItems" href="https://bokyungk.github.io/japanese-language-course-site/">프로젝트 페이지로 이동</a>
-                            </div>
+                            <a className="urlItems" href="https://www.notion.so/gombobbang/ad1be22c7f134ce7a16a194519a2a29e">프로젝트 소개로 이동</a>
+                            <a className="urlItems" href="https://bokyungk.github.io/japanese-language-course-site/">프로젝트 페이지로 이동</a>
                         </div>
                     </li>
                     <li className="projectItem">
-                        <img className="projectImage" src="walkingDiary_preview.jpg" alt="프로젝트 미리보기"></img>
+                        <img className="projectImage" src="walkingDiary_preview.webp" alt="프로젝트 미리보기"></img>
                         <div className="projectInfo">
                             <h2>산책일기</h2>
                             <p>
@@ -77,10 +75,8 @@ function Projects() {
                                 <span className="language">recoil</span>
                             </div>
                             <div className="projectType">개인 프로젝트</div>
-                            <div className="urlContainer">
-                                <a className="urlItems" href="https://www.notion.so/gombobbang/ee5a768d7569407dba2768e4d3042cba">프로젝트 소개로 이동</a>
-                                <a className="urlItems" href="https://app.walking-diary-server.site/">프로젝트 페이지 이동</a>
-                            </div>
+                            <a className="urlItems" href="https://www.notion.so/gombobbang/ee5a768d7569407dba2768e4d3042cba">프로젝트 소개로 이동</a>
+                            <a className="urlItems" href="https://app.walking-diary-server.site/">프로젝트 페이지 이동</a>
                         </div>
                     </li>
                 </ol>

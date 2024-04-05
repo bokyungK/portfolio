@@ -5,7 +5,7 @@ function Contact() {
     return (
         <div className="Contact">
             <div className="inner">
-                <img className="profile" src="profile.png" alt="캐릭터 이미지"></img>
+                <img className="profile" src="./profile_big.webp" alt="김보경 아바타"></img>
                 <div className="info">
                     <div className="infoItems name">안녕하세요, <span>김보경</span>입니다!</div>
                     <div className="infoItems job">Frontend Developer</div>
