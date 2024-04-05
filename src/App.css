@@ -96,9 +96,10 @@ body {
 
 .profile {
   width: 400px;
+  height: 400px;
   border-radius: 100%;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
-  transition: width 0.5s ease-out;
+  transition: width 0.5s ease-out, height 0.5s ease-out;
 }
 
 .info {
@@ -286,7 +287,7 @@ body {
   /* Contact */
   .profile {
     width: 300px;
-    content: url('../public/profile_small.webp');
+    height: 300px;
   }
 
   /* Projects */
