@@ -1,6 +1,40 @@
 import React from "react";
+import { useEffect } from 'react';
 
 function Projects() {
+    useEffect(() => {
+        // dom 추출 리액트스럽게 변경 & useMemo 사용하기
+        const projectImages = document.querySelectorAll('.projectImage');
+        let firstBrowserMove = true;
+
+        projectImages[0].classList.add('aniRotateStop');
+        if (window.innerWidth > 780) projectImages[0].classList.add('aniRotateRight');
+        else projectImages[0].classList.add('aniRotateLeft');
+
+        window.addEventListener('resize', function() {
+            const curBrowserWidth = window.innerWidth;
+
+            if (curBrowserWidth > 780) {
+                if (projectImages[0].classList.contains('aniRotateRight')) {
+                    return;
+                }
+                projectImages.forEach((element) => element.classList.add('aniRotateRight'));
+                projectImages.forEach((element) => element.classList.remove('aniRotateLeft'));
+            } else {
+                if (projectImages[0].classList.contains('aniRotateLeft')) {
+                    return;
+                }
+                projectImages.forEach((element) => element.classList.add('aniRotateLeft'));
+                projectImages.forEach((element) => element.classList.remove('aniRotateRight'));
+            }
+
+            if (firstBrowserMove) {
+                firstBrowserMove = false;
+                projectImages[0].classList.remove('aniRotateStop');
+            }
+        });
+    }, []);
+
     return (
         <div className="Projects">
                 <ol className="projectContainer">

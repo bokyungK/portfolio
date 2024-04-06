@@ -43,6 +43,10 @@ body {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.title:hover {
+  background-color: #f5f5f5;
+}
+
 .title > div {
   /* background-color: #fff;
   padding: 5px 20px;
@@ -59,6 +63,7 @@ body {
   justify-content: space-between;
   list-style: none;
   font-size: 0.7rem;
+  position: relative;
 }
 
 .menu {
@@ -99,7 +104,7 @@ body {
   height: 400px;
   border-radius: 100%;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
-  transition: width 0.5s ease-out, height 0.5s ease-out;
+  transition: width 0.25s ease-out, height 0.25s ease-out;
 }
 
 .info {
@@ -164,7 +169,7 @@ body {
   max-width: max-content;
   color: #F3E8EB;
   /* background-color: #F3E8EB; */
-  border-radius: 30px;
+  border-radius: 10px;
   padding: 15px;
   font-size: 16px;
   word-break: break-all;
@@ -193,6 +198,7 @@ body {
   justify-content: space-around;
   align-items: center;
   margin: 0 20px 150px;
+  transition: height 0.5s ease-out;
 }
 
 .projectContainer > li:nth-child(2n){
@@ -205,6 +211,18 @@ body {
   border-radius: 100%;
   object-fit: cover;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
+}
+
+.projectImage.aniRotateRight {
+  animation: rotateRightFirst 1s ease-in-out;
+}
+
+.projectImage.aniRotateLeft {
+  animation: rotateLeftFirst 1s ease-in-out;
+}
+
+.projectImage.aniRotateStop {
+  animation: unset;
 }
 
 .projectInfo {
@@ -295,7 +313,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 80px;
+    margin-bottom: 90px;
   }
 
   .projectImage {
@@ -308,5 +326,33 @@ body {
 
   .Contact > .inner {
     flex-direction: column;
+  }
+}
+
+@keyframes rotateRightFirst {
+  0% {
+    rotate: -10deg;
+  }
+
+  50% {
+    rotate: +10deg;
+  }
+
+  100% {
+    rotate: 0deg;
+  }
+}
+
+@keyframes rotateLeftFirst {
+  0% {
+    rotate: +10deg;
+  }
+
+  50% {
+    rotate: -10deg;
+  }
+
+  100% {
+    rotate: 0deg;
   }
 }
