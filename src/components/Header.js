@@ -25,7 +25,7 @@ function Header() {
     return (
         <header>
             <Link to="/" style={{ textDecoration: "none" }}>
-                <h1 className="title">Portfolio</h1>
+                <h1 className="title">Portfolio!</h1>
             </Link>
             <ul className="navigation">
                 <Link to="/" style={{ textDecoration: "none" }}>
