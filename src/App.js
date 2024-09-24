@@ -1,21 +1,31 @@
 import './App.css';
-import Header from './components/Header.js';
-import Contact from './components/Contact.js';
-import Stats from './components/Stats.js';
-import Projects from './components/Projects.js';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import { BrowserRouter } from 'react-router-dom';
+import Home from './components/Home';
+import { useState, useEffect } from 'react';
 
 function App() {
+  const [scrollMenu, setScrollMenu] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 62) setScrollMenu(true);
+      else setScrollMenu(false);
+    };
+  
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [])
+
   return (
     <BrowserRouter>
       <div className="App">
           <div className="wrapper">
-            <Header></Header>
-            <Routes>
-              <Route exact path="/" element={<Contact />}></Route>
-              <Route path="/stat" element={<Stats />}></Route>
-              <Route path="/project" element={<Projects />}></Route>
-            </Routes>
+            <Header scrollMenu={scrollMenu} />
+            <Home />
           </div>
       </div>
     </BrowserRouter>
