@@ -80,17 +80,21 @@ export default function Projects() {
             return (
               <li className="projectItem" key={imageName}>
                 <div className="projectInfo">
-                  <h2>{title}</h2>
-                  <div className="imageContainer">
-                    <img className={`projectImage ${imageName}`} src={`/project/${imageName}.jpg`} alt={`${title} 미리보기`}></img>
-                  </div>
-                  <p>{description}</p>
-                  <div className="languages">
-                    🧰 use : {tags.join(', ')}
-                  </div>
-                  <div className="linkWrap">
-                    <a className="urlItems" href={infoUrl}>깃헙</a>
-                    <a className="urlItems" href={siteUrl}>사이트</a>
+                  <h2>{`<${title}>`}</h2>
+                  <div className="project-content">
+                    <div className="imageContainer">
+                      <img className={`projectImage ${imageName}`} src={`/project/${imageName}.jpg`} alt={`${title} 미리보기`}></img>
+                    </div>
+                    <div>
+                      <p>{description}</p>
+                      <div className="languages">
+                        🧰 use : {tags.join(', ')}
+                      </div>
+                      <div className="linkWrap">
+                        <a className="urlItems" href={infoUrl}>깃헙</a>
+                        <a className="urlItems" href={siteUrl}>사이트</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </li>
