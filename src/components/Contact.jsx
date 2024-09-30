@@ -10,7 +10,7 @@ export default function Contact() {
             <img className="profile-image" src="./profile_big.webp" alt="김보경 아바타"></img>
             <div className="profile-icons">
               {
-                PROFILE_ICONS.map((cnt) => <img src={`/contact/keyword_border_${cnt}.png`} alt="키워드" />)
+                PROFILE_ICONS.map((cnt) => <img key={cnt} src={`/contact/keyword_border_${cnt}.png`} alt="키워드" />)
               }
             </div>
           </div>
