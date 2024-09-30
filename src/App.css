@@ -357,10 +357,6 @@ p {
   transition: height 0.5s ease-out;
 }
 
-.projectItem:first-child {
-  height: calc(100vh - 30px);
-}
-
 .projectContainer > li:not(:last-child) {
   border-bottom: 1px solid rgb(68, 67, 67);
 }
@@ -376,6 +372,11 @@ p {
   overflow: hidden;
   margin-bottom: 1rem;
   border-radius: 10px;
+}
+
+.imageContainer:has(.toDoList, .gameShop) {
+  display: flex;
+  align-items: center;
 }
 
 .projectImage {
