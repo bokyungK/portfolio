@@ -25,9 +25,9 @@
   --bg-color: #2E5090;
   --bg-color: #202022;
   /* --bg-color: #323232; */
-  --bg-point-color: #CFFFE5;
-  /* --bg-point-color: #FFDC02; */
-  /* --bg-point-color: #FF6F61; */
+  /* --bg-point-color: #CFFFE5;
+  --bg-point-color: #FFDC02; */
+  --bg-point-color: #FF6F61;
 
   font-family: 'RIDIBatang';
   color: var(--text-color-light);
@@ -475,7 +475,7 @@ p {
   margin-top: 0.5rem;
   margin-right: 0.5rem;
   border-radius: 5px;
-  color: #433E49;
+  color: var(--text-color-light);
   width: 100%;
   text-align: center;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
@@ -488,7 +488,7 @@ p {
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   border-radius: 5px;
-  color: var(--text-color-dark);
+  color: var(--text-color-light);
 }
 
 .url-items:hover {
