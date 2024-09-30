@@ -16,15 +16,17 @@ const getPage = (scrollTop, viewHeight) => {
 }
 
 function App() {
-  const [scrollMenu, setScrollMenu] = useState('');
+  const [scrollMenu, setScrollMenu] = useState('init');
   const [page, setPage] = useState(1);
 
   useEffect(() => {
-    const handleScroll = (e) => {
+    const handleScroll = () => {
       if (window.scrollY >= 100) {
         setScrollMenu('scroll');
       } else {
-        setScrollMenu('');
+        if (scrollMenu !== 'init') {
+          setScrollMenu('no-scroll');
+        }
       }
 
       const scrollTop = window.scrollY;
@@ -36,7 +38,7 @@ function App() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [])
+  }, [scrollMenu])
 
   return (
     <BrowserRouter>

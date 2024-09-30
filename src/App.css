@@ -26,8 +26,8 @@
   --bg-color: #202022;
   /* --bg-color: #323232; */
   --bg-point-color: #CFFFE5;
-  /* --bg-point-color: #FFDC02;
-  --bg-point-color: #FF6F61; */
+  /* --bg-point-color: #FFDC02; */
+  /* --bg-point-color: #FF6F61; */
 
   font-family: 'RIDIBatang';
   color: var(--text-color-light);
@@ -62,7 +62,6 @@ header > .navigation:last-child {
   justify-content: flex-end;
   writing-mode: vertical-rl;
   opacity: 0;
-  animation: fadeOut 0.5s;
 }
 
 header.scroll > .navigation:last-child {
@@ -71,14 +70,13 @@ header.scroll > .navigation:last-child {
   display: flex;
 }
 
-header > .navigation > .menu {
+header.no-scroll > .navigation:last-child {
   animation: fadeOut 0.5s;
 }
 
 header > .navigation:last-child > .menu {
   width: 30px;
   height: 60px;
-  animation: fadeIn 0.5s;
 }
 
 section {
@@ -398,18 +396,6 @@ p {
   transform: translateY(-30px);
 }
 
-.project-image.aniRotateRight {
-  animation: rotateRightFirst 1s ease-in-out;
-}
-
-.project-image.aniRotateLeft {
-  animation: rotateLeftFirst 1s ease-in-out;
-}
-
-.project-image.aniRotateStop {
-  animation: unset;
-}
-
 .project-info {
   display: flex;
   flex-direction: column;
@@ -607,45 +593,15 @@ p {
   }
 }
 
-@keyframes rotateRightFirst {
-  0% {
-    rotate: -10deg;
-  }
-
-  50% {
-    rotate: +10deg;
-  }
-
-  100% {
-    rotate: 0deg;
-  }
-}
-
-@keyframes rotateLeftFirst {
-  0% {
-    rotate: +10deg;
-  }
-
-  50% {
-    rotate: -10deg;
-  }
-
-  100% {
-    rotate: 0deg;
-  }
-}
-
 @keyframes deco {
 
   0%,
   100% {
     transform: scale(0.7);
-    /* opacity: 0; */
   }
 
   50% {
     transform: scale(1);
-    /* opacity: 1; */
   }
 }
 
