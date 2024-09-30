@@ -23,7 +23,7 @@ const SKILL_LIST = [
 export default function Skills() {
   return (
     <Element id='toSkills' className="skills">
-      <h2 className="sectionTitle">Skills</h2>
+      <h2 className="section-title">Skills</h2>
       <div className="inner">
         <ol className="skillList">
           {

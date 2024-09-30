@@ -13,16 +13,16 @@ export default function Header({ scrollMenu, page }) {
   const [active, setActive] = useState({...INITIAL_ACTIVE, contact: 'active'});
   const pageName = pathname.replace('/', '');
   const handleScroll = (e) => {
-    const { id } = e.target;
+    const value = e.target.innerText.toLowerCase();
      
-    if (id === 'contact') animateScroll.scrollTo(0, { smooth: true, duration: 1000 })
-    else if (id === 'skills') {
+    if (value === 'contact') animateScroll.scrollTo(0, { smooth: true, duration: 1000 })
+    else if (value === 'skills') {
       scroller.scrollTo('toSkills', { smooth: true, duraion: 1000, offset: -30 })
-    } else if (id === 'projects') {
+    } else if (value === 'projects') {
       scroller.scrollTo('toProject', { smooth: true, duraion: 1000, offset: -30 })
     }
 
-    setActive({ ...INITIAL_ACTIVE, [id]: 'active' });
+    setActive({ ...INITIAL_ACTIVE, [value]: 'active' });
   }
 
   useEffect(() => {
@@ -34,9 +34,14 @@ export default function Header({ scrollMenu, page }) {
   return (
     <header className={`${pageName ? pageName : 'home'} ${scrollMenu}`}>
       <ul className="navigation">
-        <li id='contact' onClick={handleScroll} className={`menu ${active.contact}`}>Contact</li>
-        <li id='skills' onClick={handleScroll} className={`menu ${active.skills}`}>Skills</li>
-        <li id='projects' onClick={handleScroll} className={`menu ${active.projects}`}>Projects</li>
+        <li onClick={handleScroll} className={`menu ${active.contact}`}>Contact</li>
+        <li onClick={handleScroll} className={`menu ${active.skills}`}>Skills</li>
+        <li onClick={handleScroll} className={`menu ${active.projects}`}>Projects</li>
+      </ul>
+      <ul className="navigation">
+        <li onClick={handleScroll} className={`menu ${active.contact}`}>Contact</li>
+        <li onClick={handleScroll} className={`menu ${active.skills}`}>Skills</li>
+        <li onClick={handleScroll} className={`menu ${active.projects}`}>Projects</li>
       </ul>
     </header>
   )

@@ -5,7 +5,7 @@ import Projects from './Projects';
 
 export default function Home() {
   return (
-    <div className='innerWrap'>
+    <div className='home'>
       <Contact />
       <Skills />
       <Projects />

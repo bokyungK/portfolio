@@ -5,7 +5,7 @@ const PROFILE_ICONS = Array.from({ length: 4 }, (v, i) => i + 1);
 export default function Contact() {
 
     return (
-      <section className="Contact">
+      <section className="contact">
           <div className="profile-container">
             <img className="profile-image" src="./profile_big.webp" alt="김보경 아바타"></img>
             <div className="profile-icons">
@@ -14,7 +14,7 @@ export default function Contact() {
               }
             </div>
           </div>
-          <p className="infoItems profileIntro">
+          <p className="profile-intro">
             안녕하세요
             <span className="job">Frontend Developer</span>
             김보경입니다!

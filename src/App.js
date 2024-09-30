@@ -21,7 +21,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = (e) => {
-      if (window.scrollY >= 62) {
+      if (window.scrollY >= 100) {
         setScrollMenu('scroll');
       } else {
         setScrollMenu('');

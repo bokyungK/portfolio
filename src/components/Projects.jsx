@@ -38,29 +38,29 @@ const PROJECTS = [
 
 export default function Projects() {
   return (
-    <Element id="toProject" className="Projects">
-      <h2 className="sectionTitle">Projects</h2>
-      <ol className="projectContainer">
+    <Element id="toProject" className="projects">
+      <h2 className="section-title">Projects</h2>
+      <ol className="project-container">
         {
           PROJECTS.map((item) => {
             const { title, description, imageName, tags, infoUrl, siteUrl } = item;
 
             return (
-              <li className="projectItem" key={imageName}>
-                <div className="projectInfo">
+              <li className="project-item" key={imageName}>
+                <div className="project-info">
                   <h2>{`<${title}>`}</h2>
                   <div className="project-content">
-                    <div className="imageContainer">
-                      <img className={`projectImage ${imageName}`} src={`/project/${imageName}.jpg`} alt={`${title} 미리보기`}></img>
+                    <div className="image-container">
+                      <img className={`project-image ${imageName}`} src={`/project/${imageName}.jpg`} alt={`${title} 미리보기`}></img>
                     </div>
                     <div>
                       <p>{description}</p>
                       <div className="languages">
                         🧰 use : {tags.join(', ')}
                       </div>
-                      <div className="linkWrap">
-                        <a className="urlItems" href={infoUrl}>깃헙</a>
-                        <a className="urlItems" href={siteUrl}>사이트</a>
+                      <div className="link-container">
+                        <a className="url-items" href={infoUrl}>깃헙</a>
+                        <a className="url-items" href={siteUrl}>사이트</a>
                       </div>
                     </div>
                   </div>
