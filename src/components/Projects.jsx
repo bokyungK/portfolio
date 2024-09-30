@@ -10,14 +10,14 @@ const PROJECTS = [
     infoUrl: 'https://github.com/bokyungK/making-to-do-list',
     siteUrl: 'https://bobo-to-do.netlify.app/'
   },
-  {
-    title: 'Youtube Clone',
-    description: '공식 API를 활용하여 유튜브와 똑같은 사이트를 제작한 프로젝트입니다.',
-    imageName: 'gomtube',
-    tags: ['React', 'React-Router-Dom', 'Tailwind'],
-    infoUrl: 'https://github.com/bokyungK/youtube-clone',
-    siteUrl: 'https://gomtube.netlify.app/',
-  },
+  // {
+  //   title: 'Youtube Clone',
+  //   description: '공식 API를 활용하여 유튜브와 똑같은 사이트를 제작한 프로젝트입니다.',
+  //   imageName: 'gomtube',
+  //   tags: ['React', 'React-Router-Dom', 'Tailwind'],
+  //   infoUrl: 'https://github.com/bokyungK/youtube-clone',
+  //   siteUrl: 'https://gomtube.netlify.app/',
+  // },
   {
     title: 'Game Shop',
     description: '게임 팩 판매 사이트를 제작했습니다. 관리자 계정으로 새로운 제품 등록, 등록된 제품 가져오기, 로그인/로그아웃, 유저별로 장바구니를 등록하고 확인 수 있습니다.',
@@ -36,39 +36,7 @@ const PROJECTS = [
   }
 ];
 
-export default function Projects() {  
-  // useEffect(() => {
-  //   const projectImages = document.querySelectorAll('.projectImage');
-  //   let firstBrowserMove = true;
-
-  //   projectImages[0].classList.add('aniRotateStop');
-  //   if (window.innerWidth > 780) projectImages[0].classList.add('aniRotateRight');
-  //   else projectImages[0].classList.add('aniRotateLeft');
-
-  //   window.addEventListener('resize', function() {
-  //       const curBrowserWidth = window.innerWidth;
-
-  //       if (curBrowserWidth > 780) {
-  //           if (projectImages[0].classList.contains('aniRotateRight')) {
-  //               return;
-  //           }
-  //           projectImages.forEach((element) => element.classList.add('aniRotateRight'));
-  //           projectImages.forEach((element) => element.classList.remove('aniRotateLeft'));
-  //       } else {
-  //           if (projectImages[0].classList.contains('aniRotateLeft')) {
-  //               return;
-  //           }
-  //           projectImages.forEach((element) => element.classList.add('aniRotateLeft'));
-  //           projectImages.forEach((element) => element.classList.remove('aniRotateRight'));
-  //       }
-
-  //       if (firstBrowserMove) {
-  //           firstBrowserMove = false;
-  //           projectImages[0].classList.remove('aniRotateStop');
-  //       }
-  //     });
-  // }, []);
-
+export default function Projects() {
   return (
     <Element id="toProject" className="Projects">
       <h2 className="sectionTitle">Projects</h2>
