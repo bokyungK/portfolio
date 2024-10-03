@@ -4,7 +4,7 @@ import { Element } from 'react-scroll';
 const PROJECTS = [
   {
     title: 'To Do List',
-    description: '간단한 투 두 리스트 작성 및 다크/라이트 모드 기능이 있는 프로젝트입니다.',
+    description: '투 두 리스트를 기록하고 다크/라이트 모드를 변경할 수 있는 미니 프로젝트입니다.',
     imageName: 'toDoList',
     tags: ['React', 'PostCSS'],
     infoUrl: 'https://github.com/bokyungK/making-to-do-list',
