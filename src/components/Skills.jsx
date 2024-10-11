@@ -16,7 +16,7 @@ const SKILL_LIST = [
   },
   {
     name: 'React',
-    description: '함수형 컴포넌트, React-Router-Dom, React-Query'
+    description: '함수형 컴포넌트, React-Router, React-Query'
   }
 ]
 
