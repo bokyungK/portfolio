@@ -15,9 +15,9 @@ export default function Contact() {
             </div>
           </div>
           <p className="profile-intro">
-            안녕하세요
-            <span className="job">Frontend Developer</span>
-            김보경입니다!
+            안녕하세요.<br />
+            <span className="job">소통</span>과 <span className="job">협력</span>을 <br className="space-keyword" />지향하는 <br className="space-dev" />
+            <span className="job">개발자</span> <br className="space-name" />김보경입니다!
           </p>
           {/* <ul className="infoList">
             <li className="infoItems email">

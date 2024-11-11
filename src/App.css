@@ -226,11 +226,17 @@ section {
 }
 
 .profile-intro {
-  display: flex;
-  flex-direction: column;
   line-height: 50px;
   font-size: 1.3rem;
   text-align: center;
+}
+
+.space-keyword {
+  display: none;
+}
+
+.space-name {
+  display: none;
 }
 
 .profileIntro>span {
@@ -590,6 +596,20 @@ p {
     top: 38%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 270px) {
+  .space-keyword {
+    display: block;
+  }
+
+  .space-dev {
+    display: none;
+  }
+
+  .space-name {
+    display: block;
   }
 }
 
