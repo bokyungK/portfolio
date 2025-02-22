@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Header from './components/Header';
 import Home from './components/Home';
 
@@ -18,22 +18,21 @@ const getPage = (scrollTop, viewHeight) => {
 function App() {
   const [scrollMenu, setScrollMenu] = useState('init');
   const [page, setPage] = useState(1);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY >= 100) {
-        setScrollMenu('scroll');
-      } else {
-        if (scrollMenu !== 'init') {
-          setScrollMenu('no-scroll');
-        }
+  const handleScroll = useCallback(() => {
+    if (window.scrollY >= 100) {
+      setScrollMenu('scroll');
+    } else {
+      if (scrollMenu !== 'init') {
+        setScrollMenu('no-scroll');
       }
-
-      const scrollTop = window.scrollY;
-      const viewHeight = window.innerHeight;
-      setPage(getPage(scrollTop, viewHeight));
     }
 
+    const scrollTop = window.scrollY;
+    const viewHeight = window.innerHeight;
+    setPage(getPage(scrollTop, viewHeight));
+  }, [scrollMenu])
+
+  useEffect(() => {
     let timer;
     
     window.addEventListener('scroll', () => {
@@ -44,7 +43,7 @@ function App() {
         }, 200)
       }
     });
-  }, [scrollMenu])
+  }, [handleScroll])
 
   return (
     <BrowserRouter>
