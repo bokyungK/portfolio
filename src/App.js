@@ -1,8 +1,8 @@
 import './App.css';
-import Header from './components/Header';
 import { BrowserRouter } from 'react-router-dom';
-import Home from './components/Home';
 import { useState, useEffect } from 'react';
+import Header from './components/Header';
+import Home from './components/Home';
 
 const getPage = (scrollTop, viewHeight) => {
   const halfViewHeight = viewHeight / 2;
@@ -33,20 +33,26 @@ function App() {
       const viewHeight = window.innerHeight;
       setPage(getPage(scrollTop, viewHeight));
     }
-  
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+
+    let timer;
+    
+    window.addEventListener('scroll', () => {
+      if (!timer) {
+        timer = setTimeout(() => {
+          timer = null;
+          handleScroll();
+        }, 200)
+      }
+    });
   }, [scrollMenu])
 
   return (
     <BrowserRouter>
       <div className="App">
-          <div className="wrapper">
-            <Header scrollMenu={scrollMenu} page={page} />
-            <Home />
-          </div>
+        <div className="wrapper">
+          <Header scrollMenu={scrollMenu} page={page} />
+          <Home />
+        </div>
       </div>
     </BrowserRouter>
   );
